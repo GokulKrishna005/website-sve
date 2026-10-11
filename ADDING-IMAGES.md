@@ -30,7 +30,7 @@ Keep the rest of `window.SVE_CONTENT` intact. After committing, GitHub Pages rep
 
 ## Logo
 
-The current header uses a text wordmark. Send the original logo as a transparent PNG or SVG in the Codex chat to replace it cleanly. The current wordmark is not a recreation of the logo in the introduction letter.
+The opening, navigation, and footer use `assets/images/sve-logo-enhanced.png`, restored from the supplied company logo and letterhead. The opening logo omits the address, telephone numbers, and email; those remain in the contact section. Keep the blue and grey brand colours when replacing this asset.
 
 ## Contact details
 

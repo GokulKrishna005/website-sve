@@ -5,6 +5,7 @@ Responsive static website for event management and equipment rentals in Bengalur
 ## Features
 
 - Responsive navigation and mobile layout.
+- Full-screen company logo opening, scroll-driven blue side accents, and section reveals; respects reduced-motion settings and works without JavaScript.
 - Four rental categories and service-specific enquiry links.
 - Filterable gallery with accessible photo dialogs.
 - Company introduction, event planning process, and expandable FAQs.
@@ -29,6 +30,6 @@ The GitHub repository and a live website are separate. Check the Pages settings 
 
 ## Content
 
-Business facts and contact details come from the supplied introduction letter. The current header is a text wordmark. Confirm the current contact numbers and provide the original logo and approved photographs for final personalization.
+Business facts and contact details come from the supplied introduction letter. The logo was restored from the supplied company images, preserving blue and grey colours and removing the letterhead contact details from the logo. Actual event photographs can be added using the image guide.
 
 Repository: https://github.com/GokulKrishna005/website-sve
