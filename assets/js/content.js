@@ -3,6 +3,18 @@
 // Only use photographs you have permission to publish.
 window.SVE_CONTENT = {
   hero: null,
+  // Add { src: 'assets/images/photo.jpg', alt: 'Describe your photo' } for each service.
+  servicePhotos: {
+    "german-tents": null,
+    "pagoda-tents": null,
+    "octonorm-stalls": null,
+    "jewellery-showcases": null,
+    "stages-platforms": null,
+    "furniture": null,
+    "branding": null,
+    "carpeting": null,
+    "sound-lighting": null
+  },
   gallery: [
     { title: "Room for the occasion", category: "Structures", src: "assets/images/event-illustration.svg", alt: "Illustration of an event tent", illustration: true },
     { title: "A place to connect", category: "Exhibitions", src: "assets/images/exhibition-illustration.svg", alt: "Illustration of exhibition booths", illustration: true },

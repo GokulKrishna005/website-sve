@@ -1,0 +1,16 @@
+.service-catalogue{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.service-card{border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#fff;min-width:0;display:flex;flex-direction:column}
+.service-photo{aspect-ratio:16/10;position:relative;overflow:hidden;background:#f1f5fc}
+.service-photo-placeholder{height:100%;min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#53698c;background:linear-gradient(135deg,#f7f9fd,#e8effa)}
+.service-photo-number{font:500 3.4rem/1 Manrope,sans-serif;letter-spacing:-.06em;color:#b0bfd8}
+.service-photo-placeholder>span:last-child{font-size:.68rem;letter-spacing:.09em;text-transform:uppercase}
+.service-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.service-card-content{padding:24px;display:flex;flex-direction:column;flex:1}
+.service-card h3{font-size:1.25rem;line-height:1.3;letter-spacing:-.025em}
+.service-card p{font-size:.84rem;margin:12px 0 22px}
+.service-card a{font-size:.76rem;font-weight:600;margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
+.service-card a:hover{color:#285fbd}.service-card a span{font-size:1.1rem}
+.services-more{display:flex;justify-content:space-between;gap:30px;align-items:center;margin-top:30px;padding:30px;background:#f2f5fb;border-radius:7px}
+.services-more .eyebrow{margin-bottom:10px}.services-more h3{font-size:1.4rem}.services-more p:not(.eyebrow){max-width:630px;font-size:.84rem;margin-top:12px}.services-more .button{flex-shrink:0}
+@media(max-width:1000px){.service-catalogue{grid-template-columns:repeat(2,minmax(0,1fr))}.services-more{align-items:flex-start;flex-direction:column}}
+@media(max-width:580px){.service-catalogue{grid-template-columns:1fr;gap:22px}.service-card-content{padding:22px}.services-more{padding:24px}.services-more .button{width:100%;gap:12px;font-size:.78rem}}

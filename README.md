@@ -6,7 +6,7 @@ Responsive static website for event management and equipment rentals in Bengalur
 
 - Responsive navigation and mobile layout.
 - Full-screen company logo opening, scroll-driven blue side accents, and section reveals; respects reduced-motion settings and works without JavaScript.
-- Four rental categories and service-specific enquiry links.
+- Nine service cards with individual photo slots, an additional-requirements callout, and service-specific enquiry links.
 - Filterable gallery with accessible photo dialogs.
 - Company introduction, event planning process, and expandable FAQs.
 - Enquiry form that prepares an email using the visitor's email app. No backend, stored enquiries, or automatic sending.

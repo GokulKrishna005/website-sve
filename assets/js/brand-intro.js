@@ -6,7 +6,7 @@
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
   let observer;
   let frame = 0;
-  const targets = [...document.querySelectorAll(".hero-copy, .hero-visual, .section-heading, .rental, .gallery-card, .about > div, .process-section h2, .process-grid article, .contact > div, #enquiry-form, .faq > *")];
+  const targets = [...document.querySelectorAll(".hero-copy, .hero-visual, .section-heading, .rental, .service-card, .gallery-card, .about > div, .process-section h2, .process-grid article, .contact > div, #enquiry-form, .faq > *")];
   function updateScroll() {
     frame = 0;
     const scroll = Math.max(0, window.scrollY);
@@ -32,7 +32,7 @@
       }, { threshold: .06, rootMargin: "0px 0px -12px 0px" });
       targets.forEach((el, index) => {
         el.classList.add("reveal");
-        el.style.setProperty("--reveal-delay", (el.matches(".rental, .process-grid article, .gallery-card") ? index % 3 * 85 : 0) + "ms");
+        el.style.setProperty("--reveal-delay", (el.matches(".rental, .service-card, .process-grid article, .gallery-card") ? index % 3 * 85 : 0) + "ms");
         observer.observe(el);
       });
       root.classList.add("motion-ready");
