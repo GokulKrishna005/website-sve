@@ -1,0 +1,53 @@
+/* Theme and animation use native SVG paths, so the logo remains sharp at any size. */
+:root{--page:#fff;--surface:#f2f5fb;--card:#fff;--blue:#2163c5;--mark-cutout:#fff;--mark-estd:#64666a}
+.theme-toggle{position:fixed;z-index:25;top:18px;right:22px;display:flex;align-items:center;gap:9px;padding:11px 15px;border:1px solid var(--line);border-radius:30px;background:var(--card);color:var(--ink);box-shadow:0 3px 18px #1223420c;font-size:.75rem;line-height:1.2}
+.theme-toggle[hidden]{display:none}.theme-toggle svg{width:18px;height:18px}.theme-sun{display:none}
+[data-theme="dark"] .theme-sun{display:block}[data-theme="dark"] .theme-moon{display:none}
+.theme-toggle:hover{border-color:var(--blue)}
+.opening-lockup{display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,62px);padding:40px 12px}
+.opening-mark{width:30%;max-width:370px;flex-shrink:0;overflow:visible}
+.opening-name{position:relative;color:#173b94;font-family:Manrope,Arial,sans-serif;font-size:clamp(22px,3.65vw,57px);font-weight:800;letter-spacing:-.035em;line-height:1.3}
+.name-word{display:inline-block}.name-word-3{display:block;font-size:.65em;letter-spacing:.23em;margin-top:10px;font-weight:600}
+.name-rule{display:block;height:2px;background:linear-gradient(90deg,#1267d2,#b9cbe7,transparent);margin-top:25px;transform-origin:left}
+.brand-animate .cube-faces{animation:cube-arrive .7s cubic-bezier(.2,.7,.3,1) both;transform-origin:60px 65px}
+.brand-animate .mark-ribbon{stroke-dasharray:1;stroke-dashoffset:0;animation:ribbon-draw 1.25s cubic-bezier(.4,0,.25,1) both}
+.brand-animate .mark-s{animation-delay:.25s}.brand-animate .mark-v{animation-delay:.9s}.brand-animate .mark-e{animation-delay:1.4s}
+.brand-animate .mark-caption{animation:caption-arrive .65s ease 2s both}
+.brand-animate .name-word{animation:name-arrive .85s cubic-bezier(.2,.7,.2,1) both}
+.brand-animate .name-word-1{animation-delay:1.1s}.brand-animate .name-word-2{animation-delay:1.4s}.brand-animate .name-word-3{animation-delay:1.8s}
+.brand-animate .name-rule{animation:rule-draw .9s ease 2.1s both}
+.header>.brand{max-width:47%;gap:12px}.header-logo{width:120px}.brand-name{font-size:.64rem;letter-spacing:.06em;line-height:1.7;padding-left:12px}
+.footer-brand{max-width:100%;background:transparent}.footer-brand .header-logo{width:100px}
+@keyframes ribbon-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes cube-arrive{from{opacity:0;transform:translateY(10px) rotate(-6deg)}to{opacity:1;transform:none}}
+@keyframes caption-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes name-arrive{from{opacity:0;transform:translateY(18px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:none;clip-path:inset(0)}}
+@keyframes rule-draw{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+[data-theme="dark"]{color-scheme:dark;--ink:#e3ebff;--muted:#abb8cf;--cream:#0b1121;--line:#2c3954;--lime:#a7c8ff;--page:#0b1121;--surface:#111c31;--card:#131f35;--blue:#7eb2ff;--mark-cutout:#0b1121;--mark-estd:#afb9c9}
+[data-theme="dark"] body,[data-theme="dark"] .brand-intro,[data-theme="dark"] .intro-stage,[data-theme="dark"] .site-content{background:var(--page)}
+[data-theme="dark"] .opening-name{color:#7eaaff}
+[data-theme="dark"] .name-rule{background:linear-gradient(90deg,#4d97ff,#29436b,transparent)}
+[data-theme="dark"] .topbar{background:#121e34;color:#d3def5}
+[data-theme="dark"] .button,[data-theme="dark"] .filters button.active{background:#3475d1;color:#fff;border-color:#3475d1}
+[data-theme="dark"] .button:hover{background:#245fb2}
+[data-theme="dark"] .service-card{background:var(--card)}
+[data-theme="dark"] .service-photo,[data-theme="dark"] .gallery-card button{background:#192842}
+[data-theme="dark"] .service-photo-placeholder{background:linear-gradient(135deg,#17263f,#1b3052);color:#a5badc}
+[data-theme="dark"] .service-photo-number{color:#829fc9}
+[data-theme="dark"] .gallery-section,[data-theme="dark"] .services-more,[data-theme="dark"] form,[data-theme="dark"] footer{background:var(--surface)}
+[data-theme="dark"] .filters button,[data-theme="dark"] input,[data-theme="dark"] select,[data-theme="dark"] textarea{border-color:#394963}
+[data-theme="dark"] input::placeholder,[data-theme="dark"] textarea::placeholder{color:#8595ae;opacity:1}
+[data-theme="dark"] .process-section{background:#12264a;color:#eef4ff}
+[data-theme="dark"] .process-grid p{color:#b5c6e4}
+[data-theme="dark"] .visual-tag{background:#101d32;color:#dce8ff}
+[data-theme="dark"] .hero-visual figcaption{background:#101d32ed;color:#dce8ff}
+[data-theme="dark"] .hero-visual{background:#14243d}
+[data-theme="dark"] .about-stamp{color:#9ebff4;border-color:#405d87}
+[data-theme="dark"] .values span,[data-theme="dark"] .line-icon{color:#91b2e5}
+[data-theme="dark"] .footer-bottom{color:#9fafca;border-color:var(--line)}
+[data-theme="dark"] .service-card a:hover{color:#91bcff}
+[data-theme="dark"] .skip{background:#142a4d;color:#fff}
+[data-theme="dark"] dialog{background:var(--surface);color:var(--ink)}
+@media(max-width:850px){.header>.brand{max-width:75%}.header-logo{width:100px}.brand-name{font-size:.58rem}.theme-toggle{top:12px;right:14px}.opening-lockup{gap:25px}.opening-mark{width:34%}}
+@media(max-width:580px){.opening-lockup{flex-direction:column;gap:34px;text-align:center;padding:20px}.opening-mark{width:min(78%,270px);max-width:none}.opening-name{font-size:clamp(21px,6.5vw,34px);line-height:1.35}.name-word-3{font-size:.62em;margin-top:13px;letter-spacing:.23em}.name-rule{margin-top:23px}.theme-toggle{padding:10px 12px;gap:6px;font-size:.67rem}.header>.brand{max-width:73%;gap:7px}.header-logo{width:85px}.brand-name{font-size:.49rem;padding-left:7px}.footer-brand .brand-name{font-size:.58rem}.footer-brand .header-logo{width:100px}}
+@media(prefers-reduced-motion:reduce){.brand-animate .cube-faces,.brand-animate .mark-ribbon,.brand-animate .mark-caption,.brand-animate .name-word,.brand-animate .name-rule{animation:none!important;stroke-dashoffset:0;opacity:1;transform:none;clip-path:none}}

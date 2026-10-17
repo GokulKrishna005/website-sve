@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 435 195" role="img" aria-label="SVE — One place for all your event solutions. Established 2011."><defs><linearGradient id="sve-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172778"/><stop offset=".55" stop-color="#154ba6"/><stop offset="1" stop-color="#0878e7"/></linearGradient><linearGradient id="sve-silver" x2="0" y2="1"><stop stop-color="#dededc"/><stop offset="1" stop-color="#a4a6a8"/></linearGradient></defs>
+<g class="cube-faces"><path d="M60 7 116 39 60 72 4 39Z" fill="#215cba"/><path d="M60 7V45L27 64 4 39Z" fill="#1c2c80"/><path d="M60 7 116 39 83 59 60 45Z" fill="#0874cf"/><path d="M4 39 60 72V123L4 91Z" fill="#0860bf"/><path d="M60 72 116 39V91L83 72 60 85Z" fill="#163c8b"/><path d="M60 85 83 72 60 59 38 72Z" fill="var(--mark-cutout,#fff)"/></g>
+<g fill="none" stroke="url(#sve-blue)" stroke-width="31" stroke-linejoin="round" stroke-linecap="butt">
+<path class="mark-ribbon mark-s" pathLength="1" d="M60 107H198C228 107 230 76 201 76H158C128 76 128 35 160 35H211"/>
+<path class="mark-ribbon mark-v" pathLength="1" d="M206 35H225L278 109 326 35H365"/>
+<path class="mark-ribbon mark-e" pathLength="1" stroke-width="24" d="M419 35H366M419 70H366V108H419"/>
+</g>
+<g class="mark-caption"><path d="M4 105 46 132H419V162H46Z" fill="url(#sve-silver)"/><path d="M4 105 46 132V162Z" fill="#929597"/><text x="55" y="151" fill="#36383b" font-family="Arial,sans-serif" font-weight="700" font-size="10.3" textLength="354" lengthAdjust="spacingAndGlyphs">ONE PLACE FOR ALL YOUR EVENT SOLUTIONS</text><text x="419" y="185" text-anchor="end" fill="var(--mark-estd,#64666a)" font-family="Arial,sans-serif" font-size="18">ESTD. - 2011</text></g></svg>

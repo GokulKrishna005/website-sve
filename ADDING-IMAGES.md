@@ -42,7 +42,9 @@ The service keys are `german-tents`, `pagoda-tents`, `octonorm-stalls`, `jewelle
 
 ## Logo asset
 
-The opening, navigation, and footer use `assets/images/sve-logo-enhanced.png`, restored from the supplied company logo and letterhead. The opening logo omits the address, telephone numbers, and email; those remain in the contact section. Keep the blue and grey brand colours when replacing this asset.
+The opening uses an inline blue SVG mark in `index.html` for the ribbon-drawing animation, with an animated company name. Navigation and footer use `assets/images/sve-mark.svg`; the browser tab uses `assets/images/favicon.svg`. The restored reference image remains in `assets/images/sve-logo-enhanced.png`. Keep the blue and grey brand colours when updating these assets. Contact details stay in the contact section.
+
+The theme button follows the visitor's system preference until they choose light or dark, then remembers that choice in their browser. Theme and opening-animation styles are in `assets/css/theme-animation.css`. Reduced-motion preferences disable the entrance animation.
 
 ## Contact details
 
