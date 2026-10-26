@@ -52,7 +52,10 @@ The German and Pagoda previews are illustrative, code-generated 3D meshes, not m
 
 To refine the models, supply front, side, and interior photos plus actual width, length, eave height, and peak height. Service photographs remain separate from the 3D viewers.
 
+## Paper theme and cursor interaction
+
+`assets/css/paper-theme.css` defines the blue paper palette for both themes, textured surfaces, and section edges. `assets/js/paper-motion.js` draws original decorative paper facets near the pointer on the logo screen, inspired by the interaction in [PaperDrops](https://tympanus.net/Demos/PaperDrops/). No source code or imagery from the demo is bundled. The actual logo remains an accessible link. The effect settles after pointer movement, stops outside the opening view or in a hidden tab, and is disabled for touch pointers and reduced-motion preferences.
+
 ## Contact details
 
 Contact details and text are in `index.html`. If changing the enquiry email or phone number, also update their occurrences in `assets/js/main.js`. The form opens the visitor's email app and does not store or send data on its own.
-
