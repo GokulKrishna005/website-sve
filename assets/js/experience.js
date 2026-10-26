@@ -1,14 +1,15 @@
 "use strict";
 (() => {
-  const root=document.documentElement, intro=document.querySelector('.brand-intro'), video=document.getElementById('intro-video'), count=document.getElementById('scene-count');
+  const root=document.documentElement, intro=document.querySelector('.brand-intro'), gateway=document.querySelector('.entry-gateway'), video=document.getElementById('intro-video'), count=document.getElementById('scene-count');
   if(!intro)return;
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   const saveData=navigator.connection?.saveData;
-  let frame=0;
+  let frame=0, lastProgress=-1;
   function scroll(){frame=0;const vh=innerHeight||1;const distance=scrollY;
     const start=intro.offsetHeight-vh*.95;
     const progress=Math.max(0,Math.min(1,(distance-start)/(vh*.6)));
-    root.style.setProperty('--world-open',progress.toFixed(3));
+    const rounded=Math.round(progress*100)/100;
+    if(rounded!==lastProgress){gateway.style.setProperty('--world-open',rounded);lastProgress=rounded;}
   }
   addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(scroll);},{passive:true});
   addEventListener('resize',scroll,{passive:true});scroll();

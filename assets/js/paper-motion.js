@@ -12,7 +12,7 @@
   if (!ctx) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const fine = matchMedia('(hover: hover) and (pointer: fine)');
-  let width = 0, height = 0, nodes = [], triangles = [], trails = [], frame = 0, visible = true, dark = false, last = null;
+  let width = 0, height = 0, nodes = [], triangles = [], trails = [], frame = 0, visible = true, dark = false, last = null, lastPaint = 0;
   const allowed = () => visible && !document.hidden && !reduced.matches && fine.matches;
   function clear() {
     cancelAnimationFrame(frame); frame = 0; trails = []; last = null;
@@ -21,10 +21,11 @@
   }
   function resize() {
     clear(); width = stage.clientWidth; height = stage.clientHeight;
-    const dpr = Math.min(devicePixelRatio || 1, 1.5);
+    if(!fine.matches || reduced.matches){canvas.width=canvas.height=1;nodes=[];triangles=[];return;}
+    const dpr = 1;
     canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     nodes = []; triangles = [];
-    const size = 85, cols = Math.ceil(width / size) + 2, rows = Math.ceil(height / size) + 2;
+    const size = 110, cols = Math.ceil(width / size) + 2, rows = Math.ceil(height / size) + 2;
     // Stable irregular triangles give the surface its folded-paper character.
     const noise = n => {const s=Math.sin(n*127.1+311.7)*43758.5453;return s-Math.floor(s);};
     for (let y=0;y<rows;y++) for(let x=0;x<cols;x++) {
@@ -35,11 +36,13 @@
   function render(now) {
     frame = 0;
     if (!allowed()) {clear();return;}
-    trails = trails.filter(p => now-p.time < 1700);
+    if(now-lastPaint<32){frame=requestAnimationFrame(render);return;}
+    lastPaint=now;
+    trails = trails.filter(p => now-p.time < 1200);
     ctx.clearRect(0,0,width,height);
     const raised = nodes.map(n => {
       let influence=0;
-      for(const p of trails){const distance=Math.hypot(n.x-p.x,n.y-p.y);if(distance<270){const falloff=1-distance/270;influence=Math.max(influence,falloff*falloff*Math.pow(1-(now-p.time)/1700,1.5));}}
+      for(const p of trails){const distance=Math.hypot(n.x-p.x,n.y-p.y);if(distance<250){const falloff=1-distance/250;influence=Math.max(influence,falloff*falloff*Math.pow(1-(now-p.time)/1200,1.5));}}
       return {...n,h:n.z*influence,influence};
     });
     for(const ids of triangles) {
