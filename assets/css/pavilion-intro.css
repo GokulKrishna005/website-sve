@@ -1,0 +1,21 @@
+/* A brief event-structure assembly frames the company wordmark. */
+.brand-pavilion{position:relative;width:66%;max-width:800px;aspect-ratio:5/2;flex-shrink:0;color:#447cbe}
+.pavilion-structure{display:block;width:100%;height:100%;overflow:visible}
+.brand-pavilion .opening-name{position:absolute;left:8%;right:8%;top:48%;text-align:center;font-size:clamp(18px,2.85vw,44px);line-height:1.25;white-space:nowrap}
+.brand-pavilion .name-word-3{font-size:.52em;letter-spacing:.34em;margin-top:14px;padding-left:.34em}
+.brand-pavilion .name-word-1{margin-right:.12em}
+.pavilion-booth{opacity:.24}.pavilion-base{opacity:.4}.pavilion-posts,.pavilion-roof{opacity:.85}.pavilion-seams{opacity:.36}.pavilion-feet{opacity:.65}
+.brand-animate .pavilion-lines path{stroke-dasharray:1;stroke-dashoffset:0;animation:pavilion-build .8s cubic-bezier(.25,.65,.3,1) both}
+.brand-animate .pavilion-base{animation-delay:.15s}.brand-animate .pavilion-posts{animation-delay:.45s}.brand-animate .pavilion-booth{animation-delay:.7s}.brand-animate .pavilion-roof{animation-delay:.95s;animation-duration:1s}.brand-animate .pavilion-seams{animation-delay:1.45s}
+.brand-animate .pavilion-cloth{animation:pavilion-fabric 1s ease 1.25s both;transform-origin:400px 106px}
+.brand-animate .pavilion-feet{animation:pavilion-appear .5s ease .2s both}
+.brand-animate .brand-pavilion .name-word{animation:name-arrive .8s cubic-bezier(.2,.7,.2,1) both}
+.brand-animate .brand-pavilion .name-word-1{animation-delay:1.55s}.brand-animate .brand-pavilion .name-word-2{animation-delay:1.7s}.brand-animate .brand-pavilion .name-word-3{animation-delay:2s}
+[data-theme="dark"] .brand-pavilion{color:#87b8f3}
+[data-theme="dark"] .brand-pavilion .opening-name{color:#aacdff}
+@keyframes pavilion-build{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes pavilion-fabric{from{opacity:0;transform:scaleY(.75)}to{opacity:1;transform:scaleY(1)}}
+@keyframes pavilion-appear{from{opacity:0}to{opacity:.65}}
+@media(min-width:581px){.opening-lockup{gap:3%}.opening-mark{width:28%}}
+@media(max-width:580px){.opening-lockup{gap:35px;padding:16px 8px}.brand-pavilion{width:100%;max-width:500px}.brand-pavilion .opening-name{font-size:clamp(15px,4.9vw,28px)}.brand-pavilion .name-word-3{margin-top:9px;font-size:.52em;letter-spacing:.28em}.pavilion-lines{stroke-width:2.5}}
+@media(prefers-reduced-motion:reduce){.brand-animate .pavilion-lines path,.brand-animate .pavilion-cloth,.brand-animate .pavilion-feet,.brand-animate .brand-pavilion .name-word{animation:none!important;stroke-dashoffset:0;transform:none}}
