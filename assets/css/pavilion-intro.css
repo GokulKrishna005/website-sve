@@ -6,11 +6,11 @@
 .brand-pavilion .name-word-1{margin-right:.12em}
 .pavilion-booth{opacity:.24}.pavilion-base{opacity:.4}.pavilion-posts,.pavilion-roof{opacity:.85}.pavilion-seams{opacity:.36}.pavilion-feet{opacity:.65}
 .brand-animate .pavilion-lines path{stroke-dasharray:1;stroke-dashoffset:0;animation:pavilion-build .8s cubic-bezier(.25,.65,.3,1) both}
-.brand-animate .pavilion-base{animation-delay:.15s}.brand-animate .pavilion-posts{animation-delay:.45s}.brand-animate .pavilion-booth{animation-delay:.7s}.brand-animate .pavilion-roof{animation-delay:.95s;animation-duration:1s}.brand-animate .pavilion-seams{animation-delay:1.45s}
-.brand-animate .pavilion-cloth{animation:pavilion-fabric 1s ease 1.25s both;transform-origin:400px 106px}
-.brand-animate .pavilion-feet{animation:pavilion-appear .5s ease .2s both}
+.brand-animate .pavilion-base{animation-delay:.15s}.brand-animate .pavilion-posts{animation-delay:.65s;animation-duration:1s}.brand-animate .pavilion-booth{animation-delay:1.25s;animation-duration:1.1s}.brand-animate .pavilion-roof{animation-delay:1.75s;animation-duration:1.2s}.brand-animate .pavilion-seams{animation-delay:2.3s}
+.brand-animate .pavilion-cloth{animation:pavilion-fabric .9s ease 2.35s both;transform-origin:400px 106px}
+.brand-animate .pavilion-feet{animation:pavilion-appear .5s ease .15s both}
 .brand-animate .brand-pavilion .name-word{animation:name-arrive .8s cubic-bezier(.2,.7,.2,1) both}
-.brand-animate .brand-pavilion .name-word-1{animation-delay:1.55s}.brand-animate .brand-pavilion .name-word-2{animation-delay:1.7s}.brand-animate .brand-pavilion .name-word-3{animation-delay:2s}
+.brand-animate .brand-pavilion .name-word-1{animation-delay:2.65s}.brand-animate .brand-pavilion .name-word-2{animation-delay:2.8s}.brand-animate .brand-pavilion .name-word-3{animation-delay:3.1s}
 [data-theme="dark"] .brand-pavilion{color:#87b8f3}
 [data-theme="dark"] .brand-pavilion .opening-name{color:#aacdff}
 @keyframes pavilion-build{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}

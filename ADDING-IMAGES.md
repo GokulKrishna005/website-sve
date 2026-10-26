@@ -30,7 +30,7 @@ Keep the rest of `window.SVE_CONTENT` intact. After committing, GitHub Pages rep
 
 ## Service photos
 
-Each card in **Our Services** has its own photo slot. Send photos in the Codex chat with the service name, or upload them to `assets/images/` and edit `servicePhotos` in `assets/js/content.js`.
+Each card in **Our Services** has its own photo slot. The current cards use photographs from the company collection in `assets/images/work/`. To replace one, upload a new image to that directory and edit `servicePhotos` in `assets/js/content.js`.
 
 Replace a `null` entry with a path and description, for example:
 
@@ -38,7 +38,9 @@ Replace a `null` entry with a path and description, for example:
 "german-tents": { src: "assets/images/german-tent.jpg", alt: "German tent setup at our event" }
 ```
 
-The service keys are `german-tents`, `pagoda-tents`, `octonorm-stalls`, `jewellery-showcases`, `stages-platforms`, `furniture`, `branding`, `carpeting`, and `sound-lighting`. Landscape photos work best. Until a photo is supplied, the card displays **Photos coming soon**. Missing or invalid images keep the placeholder visible.
+The service keys are `german-tents`, `pagoda-tents`, `octonorm-stalls`, `jewellery-showcases`, `stages-platforms`, `furniture`, `branding`, `carpeting`, and `sound-lighting`. Landscape photos work best. Missing or invalid images keep the placeholder visible. The extended use-case text is in `index.html` and appears on hover, keyboard focus, and touch screens.
+
+The opening background is `assets/video/sve-work-loop.webm`, a 12-second sequence made from three supplied company-work photos. Its still fallback is `assets/images/work/clear-canopy-wedding-entrance-01.jpeg`. The video is muted, loops, and pauses offscreen; reduced-motion and data-saving preferences show the still. The scene indicator makes the repeat clear. Its behavior is in `assets/js/experience.js` and its styles in `assets/css/experience.css`.
 
 ## Logo asset
 
