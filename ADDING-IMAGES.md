@@ -46,6 +46,13 @@ The opening uses an inline blue SVG mark in `index.html` for the ribbon-drawing 
 
 The theme button follows the visitor's system preference until they choose light or dark, then remembers that choice in their browser. Theme and opening-animation styles are in `assets/css/theme-animation.css`. Reduced-motion preferences disable the entrance animation.
 
+## Interactive tent previews
+
+The German and Pagoda previews are illustrative, code-generated 3D meshes, not measured replicas. Their geometry and controls live in `assets/js/tents.js`, with styles in `assets/css/tents.css`. They require no Blender installation, external models, or CDN libraries. Rendering happens only when the view changes. Rotate by dragging, reposition using Move mode, and zoom with the buttons or a two-finger pinch. Keyboard users can use arrows, +/−, Home, and Shift + arrows. Roof colour and side-wall options are concepts, not confirmed stock configurations.
+
+To refine the models, supply front, side, and interior photos plus actual width, length, eave height, and peak height. Service photographs remain separate from the 3D viewers.
+
 ## Contact details
 
 Contact details and text are in `index.html`. If changing the enquiry email or phone number, also update their occurrences in `assets/js/main.js`. The form opens the visitor's email app and does not store or send data on its own.
+
