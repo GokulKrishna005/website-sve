@@ -25,14 +25,18 @@
     card.querySelector('.tent-enquire').addEventListener('click', () => { document.getElementById('service').value = title; });
     const canvas = card.querySelector('canvas'), ctx = canvas.getContext('2d');
     if (!ctx) { canvas.replaceWith(document.createTextNode('3D preview unavailable in this browser. Please contact us for tent details.')); continue; }
-    let yaw = -.6, tilt = .36, zoom = 1, panX = 0, panY = 0, walls = false, move = false, colour = 'white', pending = false;
+    let yaw = -.6, tilt = .36, zoom = 1, panX = 0, panY = 0, walls = false, move = false, colour = 'white', pending = false, visible = false;
     const points = new Map();
     const reset = () => { yaw = -.6; tilt = .36; zoom = 1; panX = panY = 0; };
     function render() {
       pending = false;
-      const w = canvas.clientWidth, h = canvas.clientHeight, dpr = Math.min(devicePixelRatio || 1, 2);
+      if (!visible) return;
+      const w = canvas.clientWidth, h = canvas.clientHeight, dpr = Math.min(devicePixelRatio || 1, 1.5);
       if (!w || !h) return;
-      canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); ctx.scale(dpr, dpr);
+      const pixelWidth = Math.round(w * dpr), pixelHeight = Math.round(h * dpr);
+      if (canvas.width !== pixelWidth || canvas.height !== pixelHeight) { canvas.width = pixelWidth; canvas.height = pixelHeight; }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, w, h);
       const dark = document.documentElement.dataset.theme === 'dark';
       const roof = {white:[234,240,246],blue:[48,113,193],sand:[213,185,139]}[colour];
       const faces = [], depth = type === 'german' ? 3.4 : 2.2, width = 2.2, eave = 2.5;
@@ -69,7 +73,7 @@
         ctx.strokeStyle=f.line?'rgba(65,89,117,.22)':ctx.fillStyle;ctx.lineWidth=.6;ctx.stroke();
       });
     }
-    function draw(){tilt=clamp(tilt,-.12,1.1);zoom=clamp(zoom,.65,1.75);panX=clamp(panX,-.25,.25);panY=clamp(panY,-.25,.25);if(!pending){pending=true;requestAnimationFrame(render);}}
+    function draw(){tilt=clamp(tilt,-.12,1.1);zoom=clamp(zoom,.65,1.75);panX=clamp(panX,-.25,.25);panY=clamp(panY,-.25,.25);if(visible&&!pending){pending=true;requestAnimationFrame(render);}}
     card.querySelectorAll('[data-action]').forEach(button=>button.addEventListener('click',()=>{
       const a=button.dataset.action;
       if(a==='left')yaw-=.25;if(a==='right')yaw+=.25;if(a==='in')zoom*=1.15;if(a==='out')zoom/=1.15;if(a==='reset')reset();
@@ -96,6 +100,6 @@
     });
     new ResizeObserver(draw).observe(canvas);
     new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
-    draw();
+    new IntersectionObserver(entries => { visible = entries[0].isIntersecting; if (visible) draw(); }, { rootMargin: '200px 0px' }).observe(canvas);
   }
 })();

@@ -7,14 +7,16 @@
   accent.className = 'paper-cursor';
   accent.setAttribute('aria-hidden', 'true');
   stage.append(accent);
-  let x = 0, y = 0, frame = 0;
+  let x = 0, y = 0, frame = 0, lastX = 0, angle = 0;
   stage.addEventListener('pointermove', event => {
     x = event.clientX; y = event.clientY;
     if (frame) return;
     frame = requestAnimationFrame(() => {
       frame = 0;
       const bounds = stage.getBoundingClientRect();
-      accent.style.transform = `translate3d(${x - bounds.left - 16}px, ${y - bounds.top - 16}px, 0)`;
+      angle = Math.max(-16, Math.min(16, (x - lastX) * .5));
+      accent.style.transform = `translate3d(${x - bounds.left - 52}px, ${y - bounds.top - 52}px, 0) rotate(${angle}deg)`;
+      lastX = x;
       stage.classList.add('paper-active');
     });
   }, { passive: true });

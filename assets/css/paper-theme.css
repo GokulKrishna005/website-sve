@@ -8,8 +8,10 @@ body,.site-content,[data-theme="dark"] body,[data-theme="dark"] .site-content{ba
 .intro-stage::after{content:"";position:absolute;inset:0;z-index:2;background:url('../images/paper-grain.svg');opacity:var(--grain-opacity);pointer-events:none}
 .intro-logo{position:relative;z-index:1}
 .opening-lockup{transform:none}
-.paper-cursor{position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;border:1px solid var(--blue);box-shadow:0 0 30px #5b92e32a;z-index:3;pointer-events:none;opacity:0;transition:opacity .3s;transform:translate(-100px,-100px)}
-.paper-active .paper-cursor{opacity:.48}
+.paper-cursor{position:absolute;left:0;top:0;width:104px;height:104px;border:1px solid color-mix(in srgb,var(--blue) 55%,transparent);border-radius:50%;background:radial-gradient(circle,#5b92e31c 0%,#5b92e307 45%,transparent 68%);z-index:3;pointer-events:none;opacity:0;transition:opacity .16s ease;transform:translate3d(-150px,-150px,0)}
+.paper-cursor::before{content:"";position:absolute;inset:23px;border:1px solid color-mix(in srgb,var(--blue) 82%,transparent);transform:rotate(45deg);background:linear-gradient(135deg,#fff5,transparent 45%,#2f6dbe1c 46%,transparent 100%)}
+.paper-cursor::after{content:"";position:absolute;inset:43px;border:2px solid var(--blue);border-radius:50%;background:var(--paper-base)}
+.paper-active .paper-cursor{opacity:.88;will-change:transform}
 .topbar,[data-theme="dark"] .topbar{background:var(--paper-deep);color:#e1eaff}
 .occasion-strip{background:var(--paper-sheet);border-color:var(--line)}.occasion-strip span:nth-child(even){color:var(--blue)}
 #services,#tent-studio,.about,.contact{position:relative;isolation:isolate}

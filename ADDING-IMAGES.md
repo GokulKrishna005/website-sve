@@ -40,7 +40,7 @@ Replace a `null` entry with a path and description, for example:
 
 The service keys are `german-tents`, `pagoda-tents`, `octonorm-stalls`, `jewellery-showcases`, `stages-platforms`, `furniture`, `branding`, `carpeting`, and `sound-lighting`. Landscape photos work best. Missing or invalid images keep the placeholder visible. The extended use-case text is in `index.html` and appears on hover, keyboard focus, and touch screens.
 
-The opening background is `assets/video/sve-work-loop.webm`, a 12-second sequence made from three supplied company-work photos. Its still fallback is `assets/images/work/clear-canopy-wedding-entrance-01.jpeg`. The video is muted, loops, and pauses offscreen. Mobile screens, reduced-motion preferences, and data-saving preferences use the still image to reduce rendering work. Its behavior is in `assets/js/experience.js` and its styles in `assets/css/experience.css`.
+The opening background is `assets/video/sve-work-loop.webm`, a 12-second sequence made from three supplied company-work photos. Its still fallback is `assets/images/work/clear-canopy-wedding-entrance-01.jpeg`. The video is muted, loops, and pauses offscreen. It starts after the logo finishes building so the two effects do not compete. Mobile screens, reduced-motion preferences, and data-saving preferences use the still image. Desktop visitors can pause or resume the video with the button on the opening screen; that choice is remembered in their browser. Its behavior is in `assets/js/experience.js` and its styles in `assets/css/experience.css`.
 
 ## Service detail pages
 
@@ -60,7 +60,7 @@ To refine the models, supply front, side, and interior photos plus actual width,
 
 ## Paper theme and cursor interaction
 
-`assets/css/paper-theme.css` defines the blue paper palette for both themes, textured surfaces, and section edges. `assets/js/cursor-accent.js` moves one small decorative ring with the pointer on the logo screen. The actual logo remains an accessible link. The ring is disabled for touch pointers and reduced-motion preferences.
+`assets/css/paper-theme.css` defines the blue paper palette for both themes, textured surfaces, and section edges. `assets/js/cursor-accent.js` moves one small decorative paper-fold motif with the pointer on the logo screen. It does not draw a full-screen canvas. The actual logo remains an accessible link. The motif is disabled for touch pointers and reduced-motion preferences.
 
 ## Contact details
 
