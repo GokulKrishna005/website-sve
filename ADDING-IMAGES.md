@@ -60,7 +60,7 @@ To refine the models, supply front, side, and interior photos plus actual width,
 
 ## Paper theme and cursor interaction
 
-`assets/css/paper-theme.css` defines the blue paper palette for both themes, textured surfaces, and section edges. `assets/js/cursor-accent.js` moves one small decorative paper-fold motif with the pointer on the logo screen. It does not draw a full-screen canvas. The actual logo remains an accessible link. The motif is disabled for touch pointers and reduced-motion preferences.
+`assets/css/paper-theme.css` defines the blue paper palette for both themes, textured surfaces, and section edges. `assets/js/paper-motion.js` paints faceted paper folds near the pointer on the logo screen, inspired by [PaperDrops](https://tympanus.net/Demos/PaperDrops/). The effect uses a small canvas around the pointer rather than repainting the entire screen. The logo remains an accessible link. The folds are disabled for touch pointers and reduced-motion preferences.
 
 ## Contact details
 
