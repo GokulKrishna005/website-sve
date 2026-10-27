@@ -5,10 +5,11 @@
   const host = document.getElementById('tent-viewers');
   if (!host) return;
   const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
-  for (const [type, title, description] of [
+  const models = [
     ['german', 'German Tents', 'An elongated gable roof with an open, spacious interior.'],
     ['pagoda', 'Pagoda Tents', 'A sculpted, high-peaked canopy on a compact square footprint.']
-  ]) {
+  ];
+  for (const [type, title, description] of models.filter(model => model[0] === host.dataset.tentType)) {
     const card = document.createElement('article');
     card.className = 'tent-card'; card.id = `tent-${type}`;
     card.innerHTML = `<div class="tent-head"><p class="eyebrow">360° / CONCEPT PREVIEW</p><h3>${title}</h3><p>${description}</p></div>
@@ -17,12 +18,8 @@
       <button type="button" data-action="walls" aria-pressed="false">Side walls</button><button type="button" data-action="pan" aria-pressed="false">Move mode</button>
       <label>Roof colour <select aria-label="${title} roof colour"><option value="white">Ivory</option><option value="blue">SVE blue</option><option value="sand">Sand</option></select></label>
       <p class="tent-help" id="help-${type}">Drag to rotate · Pinch to zoom · Move mode to reposition.<br>Keyboard: arrow keys rotate, +/− zoom, Home resets. Shift + arrows move.</p>
-      <a class="tent-enquire" href="#enquiry" data-service="${title}">Enquire about ${title} ↗</a></div>`;
+      <a class="tent-enquire" href="../index.html?service=${encodeURIComponent(title)}#enquiry">Enquire about ${title} ↗</a></div>`;
     host.append(card);
-    // Connect each existing service card without replacing its future photo slot.
-    const service = document.querySelector(`[data-service-photo="${type}-tents"]`);
-    if (service) { const link = document.createElement('a'); link.className = 'tent-service-link'; link.href = `#tent-${type}`; link.textContent = 'Explore in 3D ↗'; service.after(link); }
-    card.querySelector('.tent-enquire').addEventListener('click', () => { document.getElementById('service').value = title; });
     const canvas = card.querySelector('canvas'), ctx = canvas.getContext('2d');
     if (!ctx) { canvas.replaceWith(document.createTextNode('3D preview unavailable in this browser. Please contact us for tent details.')); continue; }
     let yaw = -.6, tilt = .36, zoom = 1, panX = 0, panY = 0, walls = false, move = false, colour = 'white', pending = false, visible = false;

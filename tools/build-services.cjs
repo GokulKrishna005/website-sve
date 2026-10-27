@@ -89,6 +89,11 @@ for (const [index, service] of services.entries()) {
   }).join('\n');
   const related = services.filter(other => other.slug !== service.slug).slice((index + 1) % services.length).concat(services.filter(other => other.slug !== service.slug)).slice(0, 3);
   const enquiry = `../index.html?service=${encodeURIComponent(service.title)}#enquiry`;
+  const isTent = service.slug === 'german-tents' || service.slug === 'pagoda-tents';
+  const tentType = service.slug === 'german-tents' ? 'german' : 'pagoda';
+  const heroVisual = isTent
+    ? `<div class="detail-hero-viewer" id="tent-3d"><div class="tent-grid" id="tent-viewers" data-tent-type="${tentType}"></div><p class="tent-disclaimer">Illustrative 3D concept, not exact product specifications. Confirm available sizes, colours, and side walls with our team.</p><noscript><p>Enable JavaScript to rotate the model. The project photographs below remain available without JavaScript.</p></noscript></div>`
+    : `<figure class="detail-cover"><img src="${cover}" alt="${escape(captions[service.photos[0]] || service.title)}" width="1200" height="900" fetchpriority="high"><figcaption>From our work · ${escape(service.title)}</figcaption></figure>`;
   const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -100,8 +105,10 @@ for (const [index, service] of services.entries()) {
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/theme-animation.css">
 <link rel="stylesheet" href="../assets/css/paper-theme.css">
-<link rel="stylesheet" href="../assets/css/service-detail.css">
+<link rel="stylesheet" href="../assets/css/service-detail.css?v=7">
+${isTent ? '<link rel="stylesheet" href="../assets/css/tents.css?v=7">' : ''}
 <script src="../assets/js/theme.js" defer></script>
+${isTent ? '<script src="../assets/js/tents.js?v=7" defer></script>' : ''}
 </head>
 <body>
 <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><span class="theme-label">Dark mode</span></button>
@@ -109,7 +116,7 @@ for (const [index, service] of services.entries()) {
 <div class="topbar"><div class="wrap"><span>Based in Bengaluru. Built for occasions across South India.</span><a href="tel:+919902044446">+91 99020 44446 ↗</a></div></div>
 <header class="wrap header detail-header"><a class="brand" href="../index.html" aria-label="Sree Vijayalakshmi Enterprises home"><img class="header-logo" src="../assets/images/sve-mark.svg" width="435" height="195" alt="SVE"><span class="brand-name">SREE VIJAYALAKSHMI<br>ENTERPRISES</span></a><nav aria-label="Main navigation"><a href="../index.html#services">All services</a><a href="../index.html#gallery">Gallery</a><a class="nav-cta" href="${enquiry}">Plan your event ↗</a></nav></header>
 <main id="main">
-<section class="detail-hero"><div class="wrap detail-hero-grid"><div class="detail-heading"><a class="detail-back" href="../index.html#services">← Back to all services</a><p class="eyebrow">${String(index + 1).padStart(2, '0')} / OUR SERVICES</p><h1>${escape(service.title)}</h1><p class="detail-lead">${escape(service.lead)}</p><p>${escape(service.intro)}</p><div class="detail-actions"><a class="button" href="${enquiry}">Ask about ${escape(service.title)} <span>↗</span></a><a class="underlined" href="#project-photos">View project photos ↓</a></div></div><figure class="detail-cover"><img src="${cover}" alt="${escape(captions[service.photos[0]] || service.title)}" width="1200" height="900" fetchpriority="high"><figcaption>From our work · ${escape(service.title)}</figcaption></figure></div></section>
+<section class="detail-hero"><div class="wrap detail-hero-grid"><div class="detail-heading"><a class="detail-back" href="../index.html#services">← Back to all services</a><p class="eyebrow">${String(index + 1).padStart(2, '0')} / OUR SERVICES</p><h1>${escape(service.title)}</h1><p class="detail-lead">${escape(service.lead)}</p><p>${escape(service.intro)}</p><div class="detail-actions"><a class="button" href="${enquiry}">Ask about ${escape(service.title)} <span>↗</span></a>${isTent ? '<a class="underlined" href="#tent-3d">Explore in 3D ↓</a>' : ''}<a class="underlined" href="#project-photos">View project photos ↓</a></div></div>${heroVisual}</div></section>
 <section class="detail-uses wrap" aria-labelledby="use-title"><div><p class="eyebrow">WHERE IT FITS</p><h2 id="use-title">Made for the occasion.</h2></div><ul>${service.uses.map(use => `<li>${escape(use)}</li>`).join('')}</ul></section>
 <section class="detail-gallery" id="project-photos"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">FROM OUR WORK / ${String(service.photos.length).padStart(2, '0')} PHOTOS</p><h2>${escape(service.title)} in focus.</h2></div><p>Explore these company project photos. Select an image to open the full photograph.</p></div><div class="detail-grid">${pictures}</div></div></section>
 <section class="detail-next wrap"><div><p class="eyebrow">LET'S PLAN YOUR SETUP</p><h2>Tell us what you have in mind.</h2><p>Share the date, venue, and size of your event. We can discuss a suitable setup and confirm availability in a quotation.</p></div><a class="button" href="${enquiry}">Request a quotation <span>↗</span></a></section>

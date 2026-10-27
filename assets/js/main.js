@@ -1,4 +1,11 @@
 "use strict";
+const oldTentDestinations = {
+  "#tent-german": "services/german-tents.html#tent-3d",
+  "#tent-pagoda": "services/pagoda-tents.html#tent-3d"
+};
+if (oldTentDestinations[location.hash]) {
+  location.replace(oldTentDestinations[location.hash]);
+}
 document.getElementById("year").textContent = String(new Date().getFullYear());
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("navigation");
