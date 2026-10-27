@@ -8,8 +8,8 @@ body,.site-content,[data-theme="dark"] body,[data-theme="dark"] .site-content{ba
 .intro-stage::after{content:"";position:absolute;inset:0;z-index:2;background:url('../images/paper-grain.svg');opacity:var(--grain-opacity);pointer-events:none}
 .intro-logo{position:relative;z-index:1}
 .opening-lockup{transform:none}
-.paper-folds{position:absolute;left:0;top:0;width:360px;height:360px;z-index:2;pointer-events:none;opacity:0;transition:opacity .2s ease;transform:translate3d(-500px,-500px,0)}
-.paper-active .paper-folds{opacity:1;will-change:transform}
+.paper-folds{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;opacity:0;transition:opacity .1s ease}
+.paper-active .paper-folds{opacity:1}
 .topbar,[data-theme="dark"] .topbar{background:var(--paper-deep);color:#e1eaff}
 .occasion-strip{background:var(--paper-sheet);border-color:var(--line)}.occasion-strip span:nth-child(even){color:var(--blue)}
 #services,#tent-studio,.about,.contact{position:relative;isolation:isolate}
