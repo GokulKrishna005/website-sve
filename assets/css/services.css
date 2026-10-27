@@ -12,6 +12,16 @@
 .service-card a:hover{color:#285fbd}.service-card a span{font-size:1.1rem}
 .service-detail-link::before{content:"";position:absolute;inset:0;z-index:2}
 .tent-service-link{position:relative;z-index:3;display:inline-flex;align-self:flex-start;margin:14px 20px 0;border-bottom:1px solid currentColor;color:var(--blue);font-size:.76rem;font-weight:700}
+.client-section{padding:82px 0;background:var(--paper-sheet)}
+.client-section .section-heading{margin-bottom:34px}
+.client-groups{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:22px}
+.client-group{padding:30px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.client-group h3{font-size:1.15rem;margin-bottom:22px}
+.client-group ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.client-group:first-child ul{grid-template-columns:1fr}
+.client-group li{padding:13px 0;border-top:1px solid var(--line);font-size:.84rem;font-weight:600;line-height:1.45}
+@media(max-width:760px){.client-section{padding:58px 0}.client-groups{grid-template-columns:1fr}.client-group{padding:24px}}
+@media(max-width:480px){.client-group ul{grid-template-columns:1fr}}
 .service-card:focus-within{outline:2px solid var(--blue);outline-offset:3px}
 .services-more{display:flex;justify-content:space-between;gap:30px;align-items:center;margin-top:30px;padding:30px;background:#f2f5fb;border-radius:7px}
 .services-more .eyebrow{margin-bottom:10px}.services-more h3{font-size:1.4rem}.services-more p:not(.eyebrow){max-width:630px;font-size:.84rem;margin-top:12px}.services-more .button{flex-shrink:0}

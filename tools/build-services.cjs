@@ -72,6 +72,15 @@ const services = [
 ];
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const tentSizes = {
+  'german-tents': [
+    ['German tents', ['20 × 250', '30 × 200', '40 × 400', '50 × 200', '66 × 200', '80 × 200', '100 × 300', '133 × 300']],
+    ['Transparent German tents', ['20 × 83', '30 × 83', '40 × 120', '50 × 120']]
+  ],
+  'pagoda-tents': [
+    ['Pagoda tents', ['20 × 20', '15 × 15', '10 × 10']]
+  ]
+};
 const imagePath = (service, file) => `../assets/images/${existing.has(file) ? 'work' : 'services/' + service.group}/${file}`;
 const output = path.join(root, 'services');
 fs.mkdirSync(output, { recursive: true });
@@ -94,6 +103,7 @@ for (const [index, service] of services.entries()) {
   const heroVisual = isTent
     ? `<div class="detail-hero-viewer" id="tent-3d"><div class="tent-grid" id="tent-viewers" data-tent-type="${tentType}"></div><p class="tent-disclaimer">Illustrative 3D concept, not exact product specifications. Confirm available sizes, colours, and side walls with our team.</p><noscript><p>Enable JavaScript to rotate the model. The project photographs below remain available without JavaScript.</p></noscript></div>`
     : `<figure class="detail-cover"><img src="${cover}" alt="${escape(captions[service.photos[0]] || service.title)}" width="1200" height="900" fetchpriority="high"><figcaption>From our work · ${escape(service.title)}</figcaption></figure>`;
+  const sizeSection = isTent ? `<section class="detail-sizes" aria-labelledby="sizes-title"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">STANDARD SIZES AVAILABLE</p><h2 id="sizes-title">Find a fit for your space.</h2></div><p>Sizes below follow the company chart. Measurement units were not specified; ask us to confirm exact dimensions and availability for your event.</p></div><div class="size-groups">${tentSizes[service.slug].map(([label, sizes]) => `<div class="size-group"><h3>${escape(label)}</h3><ul>${sizes.map(size => `<li>${escape(size)}</li>`).join('')}</ul></div>`).join('')}</div></div></section>` : '';
   const html = `<!doctype html>
 <html lang="en">
 <head>
@@ -105,7 +115,7 @@ for (const [index, service] of services.entries()) {
 <link rel="stylesheet" href="../assets/css/styles.css">
 <link rel="stylesheet" href="../assets/css/theme-animation.css">
 <link rel="stylesheet" href="../assets/css/paper-theme.css">
-<link rel="stylesheet" href="../assets/css/service-detail.css?v=7">
+<link rel="stylesheet" href="../assets/css/service-detail.css?v=8">
 ${isTent ? '<link rel="stylesheet" href="../assets/css/tents.css?v=7">' : ''}
 <script src="../assets/js/theme.js" defer></script>
 ${isTent ? '<script src="../assets/js/tents.js?v=7" defer></script>' : ''}
@@ -118,6 +128,7 @@ ${isTent ? '<script src="../assets/js/tents.js?v=7" defer></script>' : ''}
 <main id="main">
 <section class="detail-hero"><div class="wrap detail-hero-grid"><div class="detail-heading"><a class="detail-back" href="../index.html#services">← Back to all services</a><p class="eyebrow">${String(index + 1).padStart(2, '0')} / OUR SERVICES</p><h1>${escape(service.title)}</h1><p class="detail-lead">${escape(service.lead)}</p><p>${escape(service.intro)}</p><div class="detail-actions"><a class="button" href="${enquiry}">Ask about ${escape(service.title)} <span>↗</span></a>${isTent ? '<a class="underlined" href="#tent-3d">Explore in 3D ↓</a>' : ''}<a class="underlined" href="#project-photos">View project photos ↓</a></div></div>${heroVisual}</div></section>
 <section class="detail-uses wrap" aria-labelledby="use-title"><div><p class="eyebrow">WHERE IT FITS</p><h2 id="use-title">Made for the occasion.</h2></div><ul>${service.uses.map(use => `<li>${escape(use)}</li>`).join('')}</ul></section>
+${sizeSection}
 <section class="detail-gallery" id="project-photos"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">FROM OUR WORK / ${String(service.photos.length).padStart(2, '0')} PHOTOS</p><h2>${escape(service.title)} in focus.</h2></div><p>Explore these company project photos. Select an image to open the full photograph.</p></div><div class="detail-grid">${pictures}</div></div></section>
 <section class="detail-next wrap"><div><p class="eyebrow">LET'S PLAN YOUR SETUP</p><h2>Tell us what you have in mind.</h2><p>Share the date, venue, and size of your event. We can discuss a suitable setup and confirm availability in a quotation.</p></div><a class="button" href="${enquiry}">Request a quotation <span>↗</span></a></section>
 <section class="detail-related wrap"><p class="eyebrow">MORE TO EXPLORE</p><h2>Explore other services.</h2><div class="detail-related-list">${related.map(item => `<a href="${item.slug}.html">${escape(item.title)} <span>↗</span></a>`).join('')}</div></section>
