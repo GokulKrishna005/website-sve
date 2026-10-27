@@ -17,7 +17,7 @@ window.SVE_CONTENT = {
     "furniture": { src: "assets/images/work/event-seating-banquet-blue-01.jpeg", alt: "Blue and white banquet table and chair arrangement" },
     "branding": { src: "assets/images/work/registration-desk-blue-backdrop-01.jpeg", alt: "Branded registration backdrop and counter" },
     "carpeting": { src: "assets/images/work/german-tent-red-carpet-exterior-01.jpeg", alt: "Red carpet leading into a covered event tent" },
-    "sound-lighting": { src: "assets/images/work/event-stage-lit-tent-01.jpeg", alt: "Stage lighting and sound equipment in an event tent" }
+    "sound-lighting": { src: "assets/images/services/stages-lighting/event-stage-auditorium-tent-01.jpeg", alt: "Lighting rigs and loudspeakers beside an event stage" }
   },
   gallery: [
     { title: "An entrance worth remembering", category: "Structures", src: "assets/images/work/clear-canopy-wedding-entrance-01.jpeg", alt: "Illuminated clear event canopy with draped entrance", illustration: false },

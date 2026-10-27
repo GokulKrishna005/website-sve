@@ -1,0 +1,43 @@
+/* Service project pages share the homepage palette but avoid continuous effects. */
+body{background:var(--page)}
+.detail-header{padding-block:23px;border-bottom:1px solid var(--line)}
+.detail-header .header-logo,.footer-brand .header-logo{height:auto}
+.detail-header .brand{max-width:48%}
+.detail-header nav{padding-right:110px}
+.detail-hero{padding:64px 0 78px;background:var(--paper-sheet)}
+.detail-hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:clamp(40px,6vw,90px);align-items:center}
+.detail-back{display:inline-block;margin-bottom:45px;color:var(--blue);font-size:.78rem;font-weight:700}
+.detail-back:hover{text-decoration:underline}
+.detail-heading .eyebrow{color:var(--blue);margin-bottom:18px}
+.detail-heading h1{font-size:clamp(3.4rem,6vw,6.4rem);line-height:1;max-width:9ch}
+.detail-heading>p:not(.eyebrow){max-width:550px;font-size:.94rem;line-height:1.8;margin-top:21px}
+.detail-heading .detail-lead{font:500 clamp(1.2rem,2vw,1.7rem)/1.35 Manrope,sans-serif!important;color:var(--ink);margin-top:32px!important}
+.detail-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:32px}
+.detail-cover{position:relative;overflow:hidden;border-radius:12px;aspect-ratio:5/4;background:var(--surface);box-shadow:0 20px 50px #142e551c}
+.detail-cover img{width:100%;height:100%;object-fit:cover}
+.detail-cover figcaption{position:absolute;bottom:18px;left:18px;padding:8px 12px;border-radius:3px;background:var(--card);color:var(--ink);font-size:.68rem;font-weight:700}
+.detail-uses{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;align-items:start;padding-block:65px}
+.detail-uses .eyebrow{color:var(--blue);margin-bottom:15px}
+.detail-uses h2{max-width:10ch}
+.detail-uses ul{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;list-style:none;margin:0;padding:0}
+.detail-uses li{min-height:108px;padding:21px 18px;border:1px solid var(--line);border-top:3px solid var(--blue);background:var(--card);font-size:.84rem;font-weight:600;line-height:1.5}
+.detail-gallery{padding-block:80px 90px;background:var(--paper-sheet)}
+.detail-gallery .section-heading{margin-bottom:37px}.detail-gallery .eyebrow{color:var(--blue)}
+.detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 20px}
+.detail-photo{min-width:0;overflow:hidden;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.detail-photo a{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
+.detail-photo img{width:100%;height:100%;object-fit:cover;transition:transform .25s ease}
+.detail-photo a:hover img{transform:scale(1.025)}
+.detail-photo figcaption{display:flex;gap:15px;padding:13px 15px 16px;color:var(--ink);font-size:.74rem;line-height:1.4}
+.detail-photo figcaption span{flex:none;color:var(--blue);font-weight:700;font-size:.63rem;letter-spacing:.1em}
+.detail-next{display:flex;justify-content:space-between;align-items:end;gap:50px;padding-block:85px}
+.detail-next>div{max-width:630px}.detail-next .eyebrow{color:var(--blue);margin-bottom:15px}
+.detail-next p:not(.eyebrow){margin-top:17px;max-width:480px;font-size:.91rem}
+.detail-next .button{flex:none}
+.detail-related{padding-bottom:90px}.detail-related .eyebrow{color:var(--blue);margin-bottom:15px}
+.detail-related-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.detail-related-list a{display:flex;justify-content:space-between;gap:15px;padding:18px 20px;border:1px solid var(--line);border-radius:4px;background:var(--card);font-weight:700;font-size:.83rem}
+.detail-related-list a:hover{border-color:var(--blue);color:var(--blue)}
+@media(max-width:1000px){.detail-header nav{padding-right:0}.detail-hero-grid{gap:35px}.detail-uses{grid-template-columns:1fr}.detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.detail-header{gap:16px}.detail-header .brand{max-width:100%}.detail-header nav{width:100%;font-size:.72rem;gap:12px}.detail-header .nav-cta{padding:8px 10px}.detail-hero{padding:40px 0 50px}.detail-hero-grid{grid-template-columns:1fr}.detail-back{margin-bottom:30px}.detail-heading h1{font-size:clamp(3rem,12vw,4.7rem)}.detail-cover{aspect-ratio:4/3}.detail-uses{padding-block:50px;gap:30px}.detail-uses ul{grid-template-columns:1fr;gap:10px}.detail-uses li{min-height:0}.detail-gallery{padding-block:55px 65px}.detail-grid{grid-template-columns:1fr}.detail-next{align-items:start;flex-direction:column;gap:24px;padding-block:60px}.detail-related{padding-bottom:65px}.detail-related-list{grid-template-columns:1fr}.theme-toggle{top:auto;bottom:12px;right:12px}}
+@media(prefers-reduced-motion:reduce){.detail-photo img{transition:none}}

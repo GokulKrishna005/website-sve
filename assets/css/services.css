@@ -10,6 +10,8 @@
 .service-card p{font-size:.84rem;margin:12px 0 22px}
 .service-card a{font-size:.76rem;font-weight:600;margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;border-top:1px solid var(--line)}
 .service-card a:hover{color:#285fbd}.service-card a span{font-size:1.1rem}
+.service-detail-link::before{content:"";position:absolute;inset:0;z-index:2}
+.service-card:focus-within{outline:2px solid var(--blue);outline-offset:3px}
 .services-more{display:flex;justify-content:space-between;gap:30px;align-items:center;margin-top:30px;padding:30px;background:#f2f5fb;border-radius:7px}
 .services-more .eyebrow{margin-bottom:10px}.services-more h3{font-size:1.4rem}.services-more p:not(.eyebrow){max-width:630px;font-size:.84rem;margin-top:12px}.services-more .button{flex-shrink:0}
 @media(max-width:1000px){.service-catalogue{grid-template-columns:repeat(2,minmax(0,1fr))}.services-more{align-items:flex-start;flex-direction:column}}

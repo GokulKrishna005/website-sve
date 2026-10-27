@@ -16,18 +16,17 @@
 <link rel="stylesheet" href="assets/css/pavilion-intro.css">
 <link rel="stylesheet" href="assets/css/experience.css">
 <script src="assets/js/experience.js" defer></script>
-<script src="assets/js/paper-motion.js" defer></script>
+<script src="assets/js/cursor-accent.js" defer></script>
 <script src="assets/js/tents.js" defer></script>
 <script src="assets/js/content.js" defer></script><script src="assets/js/main.js" defer></script>
 <script src="assets/js/services.js" defer></script>
-<script src="assets/js/brand-intro.js" defer></script>
 </head>
 <body>
 <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14A8 8 0 0 1 10 4a8.3 8.3 0 1 0 10 10Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></svg><span class="theme-label">Dark mode</span></button>
 <a class="skip" href="#main">Skip to content</a>
 <section class="brand-intro" id="home" aria-label="Sree Vijayalakshmi Enterprises">
   <div class="intro-stage">
-    <video class="intro-video" id="intro-video" muted loop playsinline preload="metadata" poster="assets/images/work/clear-canopy-wedding-entrance-01.jpeg" aria-hidden="true" tabindex="-1"><source src="assets/video/sve-work-loop.webm?v=2" type="video/webm"></video>
+    <video class="intro-video" id="intro-video" muted loop playsinline preload="none" poster="assets/images/work/clear-canopy-wedding-entrance-01.jpeg" aria-hidden="true" tabindex="-1"><source src="assets/video/sve-work-loop.webm?v=2" type="video/webm"></video>
     <div class="intro-video-tint" aria-hidden="true"></div>
     <a class="intro-logo" href="#overview" aria-label="Explore Sree Vijayalakshmi Enterprises">
       <div class="opening-lockup"><svg class="opening-mark" viewBox="0 0 435 195" aria-hidden="true"><defs><linearGradient id="sve-blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#172778"/><stop offset=".55" stop-color="#154ba6"/><stop offset="1" stop-color="#0878e7"/></linearGradient><linearGradient id="sve-silver" x2="0" y2="1"><stop stop-color="#dededc"/><stop offset="1" stop-color="#a4a6a8"/></linearGradient></defs>
@@ -60,14 +59,12 @@
 <div class="side-art side-art-left" aria-hidden="true"><span class="side-line"></span><span class="side-diamond"></span><span class="side-orbit"></span></div>
 <div class="side-art side-art-right" aria-hidden="true"><span class="side-line"></span><span class="side-diamond"></span><span class="side-orbit"></span></div>
 <div class="site-content">
-<div class="entry-gateway">
 <div class="topbar"><div class="wrap"><span>Based in Bengaluru. Built for occasions across South India.</span><a href="tel:+919902044446">+91 99020 44446 ↗</a></div></div>
 <header class="wrap header">
 <a class="brand" href="#home" aria-label="Sree Vijayalakshmi Enterprises home"><img class="header-logo" src="assets/images/sve-mark.svg" width="435" height="195" alt="SVE"><span class="brand-name">SREE VIJAYALAKSHMI<br>ENTERPRISES</span></a>
 <button class="menu-toggle" aria-controls="navigation" aria-expanded="false" hidden>Menu +</button>
 <nav id="navigation" aria-label="Main navigation"><a href="#services">Our Services</a><a href="#gallery">Gallery</a><a href="#about">About us</a><a class="nav-cta" href="#enquiry">Plan your event ↗</a></nav>
 </header>
-</div>
 <main id="main">
 <section id="overview" class="hero wrap">
 <div class="hero-copy"><p class="eyebrow"><span class="dot"></span> EVENT MANAGEMENT & RENTAL SOLUTIONS</p><h1>Every great event<br>starts with the<br><em>right setup.</em></h1><p class="lead">From the first tent to the final chair. Thoughtful infrastructure and dependable rental support for your next occasion.</p><div class="actions"><a class="button" href="#enquiry">Let’s plan your event <span>↗</span></a><a class="underlined" href="#services">Explore our services ↓</a></div><div class="hero-foot"><span>EST. 2011</span><span>BENGALURU · SOUTH INDIA</span></div></div>
@@ -79,39 +76,39 @@
 <div class="service-catalogue">
 <article class="service-card" id="service-german-tents">
 <div class="service-photo" data-service-photo="german-tents"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">01</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>German Tents</h3><p>Room to gather at any scale.</p><p class="service-use-case"><strong>Ideal for</strong> conferences, weddings and large seated events needing a wide covered space.</p><a href="#enquiry" data-service="German Tents" aria-label="Enquire about German Tents">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>German Tents</h3><p>Room to gather at any scale.</p><p class="service-use-case"><strong>Ideal for</strong> conferences, weddings and large seated events needing a wide covered space.</p><a class="service-detail-link" href="services/german-tents.html" aria-label="Explore German Tents photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-pagoda-tents">
 <div class="service-photo" data-service-photo="pagoda-tents"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">02</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Pagoda Tents</h3><p>Distinctive shade with a pointed roof.</p><p class="service-use-case"><strong>Ideal for</strong> welcome areas, outdoor counters, food stations and smaller garden gatherings.</p><a href="#enquiry" data-service="Pagoda Tents" aria-label="Enquire about Pagoda Tents">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Pagoda Tents</h3><p>Distinctive shade with a pointed roof.</p><p class="service-use-case"><strong>Ideal for</strong> welcome areas, outdoor counters, food stations and smaller garden gatherings.</p><a class="service-detail-link" href="services/pagoda-tents.html" aria-label="Explore Pagoda Tents photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-octonorm-stalls">
 <div class="service-photo" data-service-photo="octonorm-stalls"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">03</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Octonorm Stalls</h3><p>Modular spaces for exhibitors.</p><p class="service-use-case"><strong>Ideal for</strong> expos, product launches, trade fairs and branded information booths.</p><a href="#enquiry" data-service="Octonorm Stalls" aria-label="Enquire about Octonorm Stalls">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Octonorm Stalls</h3><p>Modular spaces for exhibitors.</p><p class="service-use-case"><strong>Ideal for</strong> expos, product launches, trade fairs and branded information booths.</p><a class="service-detail-link" href="services/octonorm-stalls.html" aria-label="Explore Octonorm Stalls photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-jewellery-showcases">
 <div class="service-photo" data-service-photo="jewellery-showcases"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">04</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Jewellery Showcases</h3><p>Displays that make details shine.</p><p class="service-use-case"><strong>Ideal for</strong> jewellery exhibitions, retail pop-ups and premium product presentations.</p><a href="#enquiry" data-service="Jewellery Showcases" aria-label="Enquire about Jewellery Showcases">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Jewellery Showcases</h3><p>Displays that make details shine.</p><p class="service-use-case"><strong>Ideal for</strong> jewellery exhibitions, retail pop-ups and premium product presentations.</p><a class="service-detail-link" href="services/jewellery-showcases.html" aria-label="Explore Jewellery Showcases photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-stages-platforms">
 <div class="service-photo" data-service-photo="stages-platforms"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">05</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Stages &amp; Platforms</h3><p>Give the moment its place.</p><p class="service-use-case"><strong>Ideal for</strong> ceremonies, performances, speakers and award presentations.</p><a href="#enquiry" data-service="Stages &amp; Platforms" aria-label="Enquire about Stages &amp; Platforms">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Stages &amp; Platforms</h3><p>Give the moment its place.</p><p class="service-use-case"><strong>Ideal for</strong> ceremonies, performances, speakers and award presentations.</p><a class="service-detail-link" href="services/stages-platforms.html" aria-label="Explore Stages and Platforms photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-furniture">
 <div class="service-photo" data-service-photo="furniture"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">06</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Furniture</h3><p>Comfort considered for every guest.</p><p class="service-use-case"><strong>Ideal for</strong> banquet dining, lounge areas, audience seating and hospitality zones.</p><a href="#enquiry" data-service="Furniture" aria-label="Enquire about Furniture">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Furniture</h3><p>Comfort considered for every guest.</p><p class="service-use-case"><strong>Ideal for</strong> banquet dining, lounge areas, audience seating and hospitality zones.</p><a class="service-detail-link" href="services/furniture.html" aria-label="Explore Furniture photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-branding">
 <div class="service-photo" data-service-photo="branding"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">07</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Branding</h3><p>Make the space unmistakably yours.</p><p class="service-use-case"><strong>Ideal for</strong> registration desks, sponsor walls, exhibition stands and launch events.</p><a href="#enquiry" data-service="Branding" aria-label="Enquire about Branding">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Branding</h3><p>Make the space unmistakably yours.</p><p class="service-use-case"><strong>Ideal for</strong> registration desks, sponsor walls, exhibition stands and launch events.</p><a class="service-detail-link" href="services/branding.html" aria-label="Explore Branding photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-carpeting">
 <div class="service-photo" data-service-photo="carpeting"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">08</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Carpeting</h3><p>A finished path through the event.</p><p class="service-use-case"><strong>Ideal for</strong> entrances, aisles, stage approaches and exhibition floors.</p><a href="#enquiry" data-service="Carpeting" aria-label="Enquire about Carpeting">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Carpeting</h3><p>A finished path through the event.</p><p class="service-use-case"><strong>Ideal for</strong> entrances, aisles, stage approaches and exhibition floors.</p><a class="service-detail-link" href="services/carpeting.html" aria-label="Explore Carpeting photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 <article class="service-card" id="service-sound-lighting">
 <div class="service-photo" data-service-photo="sound-lighting"><div class="service-photo-placeholder"><span class="service-photo-number" aria-hidden="true">09</span><span>Photos coming soon</span></div></div>
-<div class="service-card-content"><h3>Sound &amp; Lighting</h3><p>Set the mood. Carry every word.</p><p class="service-use-case"><strong>Ideal for</strong> stage shows, speeches, receptions and evening celebrations.</p><a href="#enquiry" data-service="Sound &amp; Lighting" aria-label="Enquire about Sound &amp; Lighting">Enquire about this service <span aria-hidden="true">↗</span></a></div>
+<div class="service-card-content"><h3>Sound &amp; Lighting</h3><p>Set the mood. Carry every word.</p><p class="service-use-case"><strong>Ideal for</strong> stage shows, speeches, receptions and evening celebrations.</p><a class="service-detail-link" href="services/sound-lighting.html" aria-label="Explore Sound and Lighting photos and details">Explore photos &amp; details <span aria-hidden="true">↗</span></a></div>
 </article>
 </div>
 <div class="services-more"><div><p class="eyebrow">AND MUCH MORE</p><h3>Something else on your list?</h3><p>Ask us about fans, cooling equipment, queue managers, barricades, wash basins, and other event requirements.</p></div><a class="button" href="#enquiry" data-service="Other requirements">Discuss your requirements <span aria-hidden="true">↗</span></a></div>

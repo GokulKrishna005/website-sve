@@ -1,8 +1,8 @@
 /* The first viewport contains only the restored company logo. */
-:root{--ink:#172958;--muted:#5c6375;--cream:#fff;--lime:#c8ddff;--line:#dce2ef;--intro-progress:0;--side-visibility:0;--side-turn:0deg;--side-travel:0px}
+:root{--ink:#172958;--muted:#5c6375;--cream:#fff;--lime:#c8ddff;--line:#dce2ef;--side-visibility:.23;--side-turn:0deg;--side-travel:0px}
 body{background:#fff}
 .brand-intro{position:relative;height:125vh;height:125svh;background:#fff;isolation:isolate}
-.intro-stage{position:sticky;top:0;height:100vh;height:100svh;display:grid;place-items:center;overflow:hidden;background:#fff}
+.intro-stage{position:relative;height:100vh;height:100svh;display:grid;place-items:center;overflow:hidden;background:#fff}
 .intro-logo{display:block;width:min(92vw,1450px);transform:translateY(calc(var(--intro-progress)*-48px)) scale(calc(1 - var(--intro-progress)*.1));opacity:calc(1 - var(--intro-progress)*.8);transform-origin:center}
 .intro-logo img{width:100%;height:auto}
 .site-content{position:relative;z-index:1;background:#fff}

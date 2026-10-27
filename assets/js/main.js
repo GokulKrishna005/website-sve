@@ -20,6 +20,10 @@ nav.addEventListener("click", (event) => {
 document.querySelectorAll("[data-service]").forEach(link => link.addEventListener("click", () => {
   document.getElementById("service").value = link.dataset.service;
 }));
+const requestedService = new URLSearchParams(location.search).get('service');
+if (requestedService && [...document.getElementById('service').options].some(option => option.value === requestedService)) {
+  document.getElementById('service').value = requestedService;
+}
 const content = window.SVE_CONTENT || { gallery: [] };
 if (content.hero && content.hero.src) {
   const hero = document.getElementById("hero-image");

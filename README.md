@@ -5,8 +5,8 @@ Responsive static website for event management and equipment rentals in Bengalur
 ## Features
 
 - Responsive navigation and mobile layout.
-- Full-screen company logo opening, scroll-driven blue side accents, and section reveals; respects reduced-motion settings and works without JavaScript.
-- Nine service cards with individual photo slots, an additional-requirements callout, and service-specific enquiry links.
+- Full-screen company logo opening with a subtle looping video on desktop and a lightweight pointer accent. Scrolling moves directly to the page content.
+- Nine service cards linking to individual photo pages, an additional-requirements callout, and service-specific enquiry links.
 - Filterable gallery with accessible photo dialogs.
 - Company introduction, event planning process, and expandable FAQs.
 - Enquiry form that prepares an email using the visitor's email app. No backend, stored enquiries, or automatic sending.
@@ -14,7 +14,7 @@ Responsive static website for event management and equipment rentals in Bengalur
 
 ## Update images
 
-See [ADDING-IMAGES.md](ADDING-IMAGES.md). Photo paths, categories, and captions are in `assets/js/content.js`; upload actual photographs to `assets/images/`. You can also send photos and the original logo in the Codex chat for integration.
+See [ADDING-IMAGES.md](ADDING-IMAGES.md). Homepage photo paths are in `assets/js/content.js`; service page photos and descriptions are in `tools/build-services.cjs`. Upload actual photographs to `assets/images/`, then regenerate the service pages with `node tools/build-services.cjs`.
 
 ## Preview
 
