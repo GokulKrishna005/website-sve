@@ -6,6 +6,18 @@ const oldTentDestinations = {
 if (oldTentDestinations[location.hash]) {
   location.replace(oldTentDestinations[location.hash]);
 }
+const welcomeHeading = document.querySelector('.hero-welcome');
+if (welcomeHeading && 'IntersectionObserver' in window) {
+  const welcomeObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      welcomeHeading.classList.add('is-visible');
+      welcomeObserver.disconnect();
+    }
+  }, { threshold: .15 });
+  welcomeObserver.observe(welcomeHeading);
+} else if (welcomeHeading) {
+  welcomeHeading.classList.add('is-visible');
+}
 document.getElementById("year").textContent = String(new Date().getFullYear());
 const toggle = document.querySelector(".menu-toggle");
 const nav = document.getElementById("navigation");

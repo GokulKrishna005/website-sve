@@ -40,7 +40,7 @@ Replace a `null` entry with a path and description, for example:
 
 The service keys are `german-tents`, `pagoda-tents`, `octonorm-stalls`, `jewellery-showcases`, `stages-platforms`, `furniture`, `branding`, `carpeting`, and `sound-lighting`. Landscape photos work best. Missing or invalid images keep the placeholder visible. The extended use-case text is in `index.html` and appears on hover, keyboard focus, and touch screens.
 
-The opening background is `assets/video/sve-work-loop.webm`, a seamless 60-second sequence made from three supplied company-work photos. It uses 400 × 224 pixels at 6 frames per second to limit decoding work. Regenerate it with `python tools/build-hero-loop.py` (requires OpenCV). Its poster is `assets/images/work/clear-canopy-wedding-entrance-01.jpeg`. The video is muted, loops, and pauses offscreen. It starts after the logo finishes building so the two effects do not compete. Mobile screens and reduced-motion preferences use the static paper background; data-saving preferences prevent video playback. Desktop visitors can pause or resume the video with the button on the opening screen; that choice is remembered in their browser. Its behavior is in `assets/js/experience.js` and its styles in `assets/css/experience.css`.
+The opening uses a static paper background and a pointer-responsive paper-fold effect. The company work photo in the combined welcome section comes from `assets/js/content.js`. The welcome headline animates once when it enters view; reduced-motion preferences disable that animation.
 
 ## Service detail pages
 

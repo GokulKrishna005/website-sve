@@ -5,7 +5,7 @@ Responsive static website for event management and equipment rentals in Bengalur
 ## Features
 
 - Responsive navigation and mobile layout.
-- Full-screen company logo opening with a subtle looping video on desktop and a lightweight pointer accent. Scrolling moves directly to the page content.
+- Full-screen company logo opening with a lightweight paper pointer effect. Scrolling moves directly to the combined welcome and services introduction.
 - Nine service cards linking to individual photo pages, an additional-requirements callout, and service-specific enquiry links.
 - Filterable gallery with accessible photo dialogs.
 - Company introduction, event planning process, and expandable FAQs.

@@ -1,16 +1,7 @@
-/* The entry moves through the canopy into a blue drafting-table world. */
-.intro-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.4;pointer-events:none}
-.intro-video-tint{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,var(--paper-base) 4%,transparent 48%,var(--paper-base) 96%),linear-gradient(var(--paper-base),transparent 28%,transparent 70%,var(--paper-base));opacity:.62;pointer-events:none}
-[data-theme="dark"] .intro-video{opacity:.36}
-[data-theme="dark"] .intro-video-tint{opacity:.72}
+/* The logo screen keeps the paper interaction lightweight. */
 .intro-stage{z-index:0}.intro-stage .paper-folds{z-index:2}.intro-stage .intro-logo{z-index:3}.intro-stage::after{z-index:4}
-.scene-cycle,.entry-cue{position:absolute;z-index:5;bottom:27px;color:var(--ink);font-size:.59rem;font-weight:700;letter-spacing:.18em}
-.scene-cycle{left:max(24px,5vw);display:flex;align-items:center;gap:11px;opacity:.75}
-.scene-cycle button{border:1px solid var(--line);border-radius:20px;padding:5px 9px;background:var(--card);color:var(--ink);font-size:.61rem;letter-spacing:normal;white-space:nowrap}
-.scene-track{display:block;width:74px;height:2px;background:currentColor;opacity:.45;overflow:hidden}.scene-track span{display:block;height:100%;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:left;animation:scene-countdown 60s linear infinite}
-.video-paused .scene-track span{animation-play-state:paused}
+.entry-cue{position:absolute;z-index:5;bottom:27px;color:var(--ink);font-size:.59rem;font-weight:700;letter-spacing:.18em}
 .entry-cue{right:max(24px,5vw);display:flex;gap:12px;align-items:center;opacity:.75}.entry-cue span{font-size:1.2rem;line-height:1}
-@keyframes scene-countdown{to{transform:scaleX(1)}}
 .brand-intro{height:100svh}.intro-logo{transform:none;opacity:1}
 #services .service-catalogue{position:relative;padding:clamp(18px,3.5vw,42px);gap:clamp(20px,3.2vw,38px);border:1px solid #abc2e5;border-radius:24px;background:linear-gradient(90deg,#315f9b0b 1px,transparent 1px),linear-gradient(#315f9b0b 1px,transparent 1px),linear-gradient(145deg,#cfddf0,#e9f1fb);background-size:26px 26px,26px 26px,auto;box-shadow:inset 0 4px 20px #214b840b,0 20px 45px #17376717;overflow:visible}
 [data-theme="dark"] #services .service-catalogue{border-color:#395678;background:linear-gradient(90deg,#aacfff0a 1px,transparent 1px),linear-gradient(#aacfff0a 1px,transparent 1px),linear-gradient(145deg,#182d4c,#203b60);background-size:26px 26px,26px 26px,auto}
@@ -30,8 +21,6 @@
 #services .service-card:hover .service-use-case,#services .service-card:focus-within .service-use-case{max-height:130px;opacity:1;transform:none;margin-top:12px;padding-top:10px;border-top-color:var(--line)}
 #services .service-card-content>a:not(.tent-service-link){margin-top:14px}
 @media(max-width:850px){#services .service-catalogue{padding:25px}}
-@media(max-width:580px){.scene-cycle{left:14px;bottom:18px;font-size:.51rem;gap:7px}.scene-track{width:35px}.entry-cue{right:14px;bottom:18px;font-size:.51rem;gap:5px}#services .service-catalogue{padding:17px;gap:24px}#services .service-card{transform:rotate(var(--card-angle,0deg));max-width:100%}#services .service-use-case,#services .service-card:hover .service-use-case,#services .service-card:focus-within .service-use-case{max-height:none;opacity:1;transform:none;margin-top:12px;padding-top:10px;border-top-color:var(--line)}}
+@media(max-width:580px){.entry-cue{right:14px;bottom:18px;font-size:.51rem;gap:5px}#services .service-catalogue{padding:17px;gap:24px}#services .service-card{transform:rotate(var(--card-angle,0deg));max-width:100%}#services .service-use-case,#services .service-card:hover .service-use-case,#services .service-card:focus-within .service-use-case{max-height:none;opacity:1;transform:none;margin-top:12px;padding-top:10px;border-top-color:var(--line)}}
 @media(hover:none){#services .service-use-case{max-height:none;opacity:1;transform:none;margin-top:12px;padding-top:10px;border-top-color:var(--line)}#services .service-card:hover{transform:rotate(var(--card-angle,0deg))}}
-@media(max-width:700px),(prefers-reduced-motion:reduce){.intro-video{display:none}}
-@media(max-width:700px){.scene-cycle button{display:none}}
-@media(prefers-reduced-motion:reduce){.scene-track span{animation:none;transform:scaleX(1)}#services .service-card,#services .service-card:hover,#services .service-card:focus-within{transition:none;transform:none}#services .service-photo img{transition:none}#services .service-use-case{max-height:none;opacity:1;transform:none;margin-top:12px;padding-top:10px;border-top-color:var(--line)}}
+@media(prefers-reduced-motion:reduce){#services .service-card,#services .service-card:hover,#services .service-card:focus-within{transition:none;transform:none}#services .service-photo img{transition:none}#services .service-use-case{max-height:none;opacity:1;transform:none;margin-top:12px;padding-top:10px;border-top-color:var(--line)}}
