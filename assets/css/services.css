@@ -12,6 +12,18 @@
 .service-card a:hover{color:#285fbd}.service-card a span{font-size:1.1rem}
 .service-detail-link::before{content:"";position:absolute;inset:0;z-index:2}
 .tent-service-link{position:relative;z-index:3;display:inline-flex;align-self:flex-start;margin:14px 20px 0;border-bottom:1px solid currentColor;color:var(--blue);font-size:.76rem;font-weight:700}
+.welcome-section{padding:70px 0 76px}
+.welcome-intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);column-gap:7%;align-items:end}
+.welcome-intro .eyebrow{grid-column:1/-1;color:var(--blue);margin-bottom:14px}
+.welcome-intro h2{max-width:16ch}
+.welcome-intro>p:last-child{font-size:.94rem;line-height:1.8;max-width:510px}
+.welcome-features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:48px}
+.welcome-features article{padding:28px 28px 30px;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.welcome-features svg{width:52px;height:52px;color:var(--blue);margin-bottom:22px;stroke-linecap:round;stroke-linejoin:round}
+.welcome-features h3{font-size:1.16rem;margin-bottom:11px}
+.welcome-features p{font-size:.83rem;line-height:1.7}
+@media(max-width:800px){.welcome-intro{grid-template-columns:1fr;gap:16px}.welcome-intro .eyebrow{margin-bottom:0}.welcome-features{gap:14px}.welcome-features article{padding:22px}}
+@media(max-width:650px){.welcome-section{padding:56px 0}.welcome-features{grid-template-columns:1fr;margin-top:30px}.welcome-features article{display:grid;grid-template-columns:52px 1fr;column-gap:19px;align-items:start}.welcome-features svg{grid-row:1/3;margin:0}.welcome-features h3{margin:1px 0 8px}}
 .client-section{padding:82px 0;background:var(--paper-sheet)}
 .client-section .section-heading{margin-bottom:34px}
 .client-groups{display:grid;grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);gap:22px}
