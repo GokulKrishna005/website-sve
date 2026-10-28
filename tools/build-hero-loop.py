@@ -14,7 +14,7 @@ SOURCES = [
     ROOT / "assets/images/work/event-stage-colour-lights-01.jpeg",
 ]
 OUTPUT = ROOT / "assets/video/sve-work-loop.webm"
-WIDTH, HEIGHT, FPS, SECONDS = 320, 180, 10, 60
+WIDTH, HEIGHT, FPS, SECONDS = 400, 224, 6, 60
 FRAMES_PER_SCENE = FPS * SECONDS // len(SOURCES)
 
 
@@ -41,7 +41,7 @@ if not writer.isOpened():
     raise RuntimeError("VP8/WebM encoder unavailable")
 
 blue = np.full((HEIGHT, WIDTH, 3), (102, 55, 25), dtype=np.uint8)
-first = cv2.GaussianBlur(cv2.addWeighted(view(images[0], 0, 0), .86, blue, .14, 0), (5, 5), 1.2)
+first = cv2.GaussianBlur(cv2.addWeighted(view(images[0], 0, 0), .93, blue, .07, 0), (3, 3), .45)
 next_starts = [view(images[(scene + 1) % len(images)], (scene + 1) % len(images), 0)
                for scene in range(len(images))]
 total_frames = FPS * SECONDS
@@ -54,7 +54,7 @@ try:
             blend = (progress - .8) / .2
             blend = blend * blend * (3 - 2 * blend)
             frame = cv2.addWeighted(frame, 1 - blend, next_starts[scene], blend, 0)
-        frame = cv2.GaussianBlur(cv2.addWeighted(frame, .86, blue, .14, 0), (5, 5), 1.2)
+        frame = cv2.GaussianBlur(cv2.addWeighted(frame, .93, blue, .07, 0), (3, 3), .45)
         if index == total_frames - 1:
             frame = first
         writer.write(frame)

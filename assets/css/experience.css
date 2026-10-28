@@ -1,8 +1,8 @@
 /* The entry moves through the canopy into a blue drafting-table world. */
-.intro-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.25;pointer-events:none}
-.intro-video-tint{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,var(--paper-base) 4%,transparent 48%,var(--paper-base) 96%),linear-gradient(var(--paper-base),transparent 28%,transparent 70%,var(--paper-base));opacity:.86;pointer-events:none}
-[data-theme="dark"] .intro-video{opacity:.25}
-[data-theme="dark"] .intro-video-tint{opacity:.88}
+.intro-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:.4;pointer-events:none}
+.intro-video-tint{position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,var(--paper-base) 4%,transparent 48%,var(--paper-base) 96%),linear-gradient(var(--paper-base),transparent 28%,transparent 70%,var(--paper-base));opacity:.62;pointer-events:none}
+[data-theme="dark"] .intro-video{opacity:.36}
+[data-theme="dark"] .intro-video-tint{opacity:.72}
 .intro-stage{z-index:0}.intro-stage .paper-folds{z-index:2}.intro-stage .intro-logo{z-index:3}.intro-stage::after{z-index:4}
 .scene-cycle,.entry-cue{position:absolute;z-index:5;bottom:27px;color:var(--ink);font-size:.59rem;font-weight:700;letter-spacing:.18em}
 .scene-cycle{left:max(24px,5vw);display:flex;align-items:center;gap:11px;opacity:.75}
