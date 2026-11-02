@@ -119,6 +119,8 @@ for (const [index, service] of services.entries()) {
 ${isTent ? '<link rel="stylesheet" href="../assets/css/tents.css?v=7">' : ''}
 <script src="../assets/js/theme.js?v=13" defer></script>
 ${isTent ? '<script src="../assets/js/tents.js?v=7" defer></script>' : ''}
+<link rel="stylesheet" href="../assets/css/scroll-reveal.css">
+<script src="../assets/js/scroll-reveal.js" defer></script>
 </head>
 <body>
 <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" hidden><span class="theme-label">Dark mode</span></button>
