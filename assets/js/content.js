@@ -15,8 +15,8 @@ window.SVE_CONTENT = {
     "jewellery-showcases": { src: "assets/images/work/jewellery-showcase-mk-jewels-corner-01.jpeg", alt: "Illuminated jewellery display and counters" },
     "stages-platforms": { src: "assets/images/work/event-stage-colour-lights-01.jpeg", alt: "Lit stage inside a large event tent" },
     "furniture": { src: "assets/images/work/event-seating-banquet-blue-01.jpeg", alt: "Blue and white banquet table and chair arrangement" },
-    "branding": { src: "assets/images/work/registration-desk-blue-backdrop-01.jpeg", alt: "Branded registration backdrop and counter" },
-    "carpeting": { src: "assets/images/work/german-tent-red-carpet-exterior-01.jpeg", alt: "Red carpet leading into a covered event tent" },
+    "branding": { src: "assets/images/work/branding-display-1.jpeg", alt: "Branded exhibition entrance" },
+    "carpeting": { src: "assets/images/work/carpet-installation-1.jpeg", alt: "Indoor event carpeting" },
     "sound-lighting": { src: "assets/images/services/stages-lighting/event-stage-auditorium-tent-01.jpeg", alt: "Lighting rigs and loudspeakers beside an event stage" }
   },
   gallery: [

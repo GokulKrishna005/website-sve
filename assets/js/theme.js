@@ -24,7 +24,7 @@
       try { localStorage.setItem('sve-theme', preference); } catch (_) { /* Keep the current selection for this visit. */ }
       apply(preference);
     });
-    // The opening logo and company name are static.
+    root.classList.add('brand-animate');
   });
   system.addEventListener('change', () => { if (!preference) apply(system.matches ? 'dark' : 'light'); });
 })();

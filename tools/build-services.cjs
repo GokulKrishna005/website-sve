@@ -51,16 +51,16 @@ const services = [
   {
     slug: 'branding', title: 'Branding', group: 'registration-desks',
     lead: 'Make the first point of contact feel like your event.',
-    intro: 'Registration counters and backdrops can carry the event identity while helping guests find their way. These photographs focus on branded entry and check-in areas.',
+    intro: 'Registration counters and backdrops can carry the event identity while helping guests find their way. These photographs show a branded exhibition entrance and a freestanding event display.',
     uses: ['Registration and check-in', 'Sponsor and event backdrops', 'Exhibition welcome areas'],
-    photos: ['registration-desk-blue-backdrop-01.jpeg','registration-desk-indoor-queue-01.jpeg','registration-desk-outdoor-multi-counter-01.jpeg']
+    photos: ['branding-display-1.jpeg','branding-display-2.jpeg']
   },
   {
     slug: 'carpeting', title: 'Carpeting', group: 'german-tents',
     lead: 'A clear path and a finished floor for the event.',
-    intro: 'Carpeting helps define entrances, aisles, and covered spaces. The company photos here show red-carpet approaches at tent installations; ask us about colours and floor coverage for your venue.',
+    intro: 'Carpeting helps define entrances, aisles, and covered spaces. These company photographs show carpet coverage across an indoor event floor and its edges; ask us about colours and floor coverage for your venue.',
     uses: ['Entrances and arrival routes', 'Aisles through covered spaces', 'Stage and exhibition approaches'],
-    photos: ['german-tent-entry-red-carpet-01.jpeg','german-tent-red-carpet-exterior-01.jpeg','german-tent-red-carpet-exterior-02.jpeg']
+    photos: ['carpet-installation-1.jpeg','carpet-installation-2.jpeg','carpet-installation-3.jpeg']
   },
   {
     slug: 'sound-lighting', title: 'Sound & Lighting', group: 'stages-lighting',
@@ -112,12 +112,12 @@ for (const [index, service] of services.entries()) {
 <meta name="description" content="Explore ${escape(service.title.toLowerCase())} projects, photos, and use cases from Sree Vijayalakshmi Enterprises in Bengaluru.">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../assets/css/styles.css?v=12">
+<link rel="stylesheet" href="../assets/css/styles.css?v=13">
 <link rel="stylesheet" href="../assets/css/theme-animation.css">
 <link rel="stylesheet" href="../assets/css/paper-theme.css">
 <link rel="stylesheet" href="../assets/css/service-detail.css?v=8">
 ${isTent ? '<link rel="stylesheet" href="../assets/css/tents.css?v=7">' : ''}
-<script src="../assets/js/theme.js?v=12" defer></script>
+<script src="../assets/js/theme.js?v=13" defer></script>
 ${isTent ? '<script src="../assets/js/tents.js?v=7" defer></script>' : ''}
 </head>
 <body>

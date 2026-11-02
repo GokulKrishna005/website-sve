@@ -9,3 +9,10 @@
 /* Site-wide typography. */
 html body,html body *{font-family:"Times New Roman",Times,serif!important}
 html body .name-word-3{font-weight:900!important}
+
+/* Consistent 4:3 frames for photographs; brand artwork retains its proportions. */
+html body .service-photo,html body .gallery-card button,html body .detail-photo a,html body .detail-cover,html body #overview .hero-visual{aspect-ratio:4/3;min-height:0}
+html body .gallery-card img,html body .detail-photo img{aspect-ratio:4/3;object-fit:cover}
+html body .showcase-ring{height:auto;aspect-ratio:20/9}
+html body .showcase-photo{aspect-ratio:4/3;bottom:auto;height:auto}
+@media(max-width:540px){html body .showcase-ring{aspect-ratio:100/57}}
